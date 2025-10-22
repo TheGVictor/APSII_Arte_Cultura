@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/style.css">
+  <!--Icones-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <title>ONG Reação Arte e Cultura</title>
+</head>
+
+<body>
+<header>
+  <nav>
+    <div class="logo"><i class="fa-solid fa-seedling"></i></div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-menu" id="navMenu">
+      <li class="nav-item">
+        <span class="nav-link active" onclick="showPage('home')">
+          <i class="fa-solid fa-house"></i> Home
+        </span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link" onclick="showPage('sobre')">
+          <i class="fa-solid fa-users"></i> Sobre Nós
+        </span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link" onclick="showPage('informacoes')">
+          <i class="fa-solid fa-book-open"></i> Informações
+        </span>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link" onclick="showPage('onde-estamos')">
+          <i class="fa-solid fa-map-location-dot"></i> Onde Estamos
+        </span>
+      </li>
+      <li class="nav-item nav-pontuacao blocked" id="navPontuacao">
+        <span class="nav-link" onclick="showPage('pontuacao')">
+          <i class="fa-solid fa-trophy"></i> Pontuação
+        </span>
+      </li>
+      <li class="nav-item auth-item">
+        <div class="auth-container">
+          <div class="auth-buttons">
+            <button class="auth-btn login-btn" id="navLoginBtn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+            <button class="auth-btn signup-btn" id="navSignupBtn"><i class="fa-solid fa-user-plus"></i> Cadastro</button>
+          </div>
+          <div class="welcome" style="display:none;"></div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Reação Arte e Cultura</h1>
+          <p>Transformando vidas através da arte, cultura e educação desde 2001. Junte-se a nós nessa jornada
+            de transformação social e desenvolvimento pessoal.</p>
+          <button class="btn" onclick="showPage('sobre')">Conheça Nossa História</button>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="image-container">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <h2><i class="fa-solid fa-bullseye"></i> Missão</h2>
+          <p>
+            Promover transformação social por meio da arte e cultura, valorizando a igualdade de direitos e
+            o resgate dos bens culturais populares da nossa comunidade.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="image-container">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h2><i class="fa-solid fa-eye"></i> Visão</h2>
+          <p>
+            Ser uma referência em transformação social através de intervenções artísticas, culturais e
+            educacionais, impactando positivamente nossa região.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="image-container">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h2><i class="fa-solid fa-hand-fist"></i> Valores</h2>
+          <p>
+            Igualdade, respeito à diversidade cultural, inclusão social e desenvolvimento comunitário
+            através da arte e educação.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOBRE NÓS -->
+    <div id="sobre" class="page">
+      <h1>Sobre a ONG Reação Arte e Cultura</h1>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="image-container">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <h2>Nossa História</h2>
+          <p>O Movimento Cultural "Reação Arte e Cultura" iniciou-se em junho de 2001, trazendo a bandeira de
+            luta a favor de uma visão, produção e intervenção artística, cultural e educacional onde se
+            valorize os princípios de igualdade de direitos para todas as pessoas.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="image-container">
+            <i class="fa-solid fa-landmark"></i>
+          </div>
+          <h2>Nossos Princípios</h2>
+          <ul class="activities-list">
+            <li><strong><i class="fa-solid fa-scale-balanced"></i> Igualdade de Direitos:</strong> Todas
+              as pessoas têm direito ao acesso à cultura e à arte</li>
+            <li><strong><i class="fa-solid fa-vase"></i> Resgate Cultural:</strong> Incentivamos e
+              resgatamos os bens imateriais populares</li>
+            <li><strong><i class="fa-solid fa-people-arrows"></i> Transformação Social:</strong>
+              Apoiamos iniciativas positivas de mudança social</li>
+            <li><strong><i class="fa-solid fa-graduation-cap"></i> Educação pela Arte:</strong> Arte
+              como ferramenta educacional e de desenvolvimento</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h2><i class="fa-solid fa-trophy"></i> Conquistas e Impacto</h2>
+        <p>Ao longo de mais de duas décadas, nossa ONG já impactou milhares de vidas, oferecendo oportunidades
+          de desenvolvimento pessoal e profissional através da arte. Nossos participantes desenvolvem não
+          apenas habilidades artísticas, mas também autoestima, senso crítico e consciência social.</p>
+      </div>
+    </div>
+
+    <!-- INFORMAÇÕES -->
+    <div id="informacoes" class="page">
+      <h1>Informações e Atividades</h1>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="image-container">
+            <i class="fa-solid fa-masks-theater"></i>
+          </div>
+          <h2>Atividades Oferecidas</h2>
+          <ul class="activities-list">
+            <li><i class="fa-solid fa-paintbrush"></i> <strong>Artes Visuais:</strong> Pintura, desenho
+              e escultura</li>
+            <li><i class="fa-solid fa-masks-theater"></i> <strong>Teatro:</strong> Expressão corporal e
+              dramaturgia</li>
+            <li><i class="fa-solid fa-music"></i> <strong>Música:</strong> Canto, instrumentos e
+              composição</li>
+            <li><i class="fa-solid fa-person-dancing"></i> <strong>Dança:</strong> Popular,
+              contemporânea e folclórica</li>
+            <li><i class="fa-solid fa-book"></i> <strong>Literatura:</strong> Leitura e contação de histórias</li>
+            <li><i class="fa-solid fa-scissors"></i> <strong>Artesanato:</strong> Cultura popular e
+              técnicas tradicionais</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="image-container">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <h2>Público Atendido</h2>
+          <p>Atendemos crianças a partir de 6 anos, jovens e adultos da comunidade, especialmente aqueles em
+            situação de vulnerabilidade social. Oferecemos oportunidades de desenvolvimento pessoal e
+            profissional através da arte e cultura.</p>
+
+          <h2>Como Participar</h2>
+          <p>As inscrições são abertas periodicamente durante o ano. Entre em contato conosco para saber sobre
+            as próximas turmas, requisitos e disponibilidade de vagas.</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h2><i class="fa-solid fa-calendar-days"></i> Horários de Funcionamento</h2>
+        <p><strong>Segunda a Sexta:</strong> 8h às 18h<br>
+          <strong>Sábados:</strong> 8h às 14h<br>
+          <strong>Domingos:</strong> Eventos especiais
+        </p>
+      </div>
+    </div>
+
+    <!-- ONDE ESTAMOS -->
+    <div id="onde-estamos" class="page">
+      <h1>Onde Estamos</h1>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="image-container">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <h2><i class="fa-solid fa-location-dot"></i> Nossa Localização</h2>
+          <p><strong>Endereço:</strong> Av. Prof. João Batista Conti, nº 1421 - Lojas C e D<br>
+            <strong>Bairro:</strong> Conjunto Residencial José Bonifácio - Itaquera<br>
+            <strong>Cidade:</strong> São Paulo - SP<br>
+            <strong>CEP:</strong> 08255-000
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="image-container">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <h2><i class="fa-solid fa-car"></i> Como Chegar</h2>
+          <p><strong>Transporte Público:</strong> Linhas de ônibus 273, 274 e 275<br>
+            <strong>Metrô:</strong> Estação Corinthians-Itaquera (Linha Vermelha)<br>
+            <strong>Estacionamento:</strong> Disponível na frente do prédio
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2><i class="fa-solid fa-phone"></i> Entre em Contato</h2>
+        <div class="success-message" id="successMessage">
+          Mensagem enviada com sucesso! Entraremos em contato em breve.
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome">Nome *</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone">
+          </div>
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem *</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required
+            placeholder="Conte-nos como podemos ajudar você..."></textarea>
+        </div>
+        <button type="button" class="btn" onclick="enviarMensagem()" id="sendBtn">
+          Enviar Mensagem
+        </button>
+      </div>
+    </div>
+
+    <!-- PONTUAÇÃO -->
+    <div id="pontuacao" class="page">
+      <h1>Sistema de Pontuação</h1>
+
+      <div class="score-card">
+        <div class="score-content">
+          <h2><i class="fa-solid fa-trophy"></i> Sua Pontuação Total</h2>
+          <div class="score-value" id="totalScore">—</div>
+          <p>Pontos acumulados</p>
+
+          <div class="streak-info">
+            <div class="streak-item">
+              <div class="streak-number" id="currentStreak">—</div>
+              <p><i class="fa-solid fa-fire"></i> Dias Consecutivos</p>
+            </div>
+            <div class="streak-item">
+              <div class="streak-number" id="monthlyGoal">20</div>
+              <p><i class="fa-solid fa-bullseye"></i> Meta do Mês</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h2><i class="fa-solid fa-chart-column"></i> Como Funciona o Sistema de Pontos</h2>
+        <ul class="activities-list">
+          <li><i class="fa-solid fa-book-open-reader"></i> <strong>Participação em Aula:</strong> 10 pontos por aula
+          </li>
+          <li><i class="fa-solid fa-fire"></i> <strong>Sequência de 7 dias:</strong> Bônus de 50 pontos</li>
+          <li><i class="fa-solid fa-star"></i> <strong>Sequência de 15 dias:</strong> Bônus de 100 pontos</li>
+          <li><i class="fa-solid fa-trophy"></i> <strong>Sequência de 30 dias:</strong> Bônus de 200 pontos</li>
+          <li><i class="fa-solid fa-tent"></i> <strong>Participação em Eventos:</strong> 25 pontos</li>
+          <li><i class="fa-solid fa-bullseye"></i> <strong>Conclusão de Projeto:</strong> 100 pontos</li>
+        </ul>
+      </div>
+
+      <div class="calendar-container">
+        <div class="calendar-header">
+          <button class="calendar-nav" onclick="changeMonth(-1)">‹</button>
+          <div class="calendar-title" id="monthYear">Janeiro 2024</div>
+          <button class="calendar-nav" onclick="changeMonth(1)">›</button>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-color trained-color"></div>
+          <span>Dia com aula participada</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color streak-color"></div>
+          <span>Dia em sequência (streak)</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== MODAIS: LOGIN / CADASTRO ===== -->
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal('loginModal')">&times;</button>
+      <h2>Login</h2>
+      <input id="loginEmail" type="email" placeholder="E-mail">
+      <input id="loginPassword" type="password" placeholder="Senha">
+      <button id="loginSubmit" class="btn">Entrar</button>
+      <p>Não tem conta? <span class="link"
+          onclick="openModal('signupModal'); closeModal('loginModal')">Cadastre-se</span></p>
+    </div>
+  </div>
+
+  <div id="signupModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal('signupModal')">&times;</button>
+      <h2>Cadastro</h2>
+      <input id="signupName" type="text" placeholder="Nome completo">
+      <input id="signupEmail" type="email" placeholder="E-mail">
+      <input id="signupPassword" type="password" placeholder="Senha">
+      <button id="signupSubmit" class="btn">Cadastrar</button>
+      <p>Já tem conta? <span class="link" onclick="openModal('loginModal'); closeModal('signupModal')">Entrar</span></p>
+    </div>
+  </div>
+
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>
